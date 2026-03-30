@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider, use_auth } from "./auth";
 import Sidebar from "./components/sidebar";
 import SplashPage from "./pages/splash";
-import CallbackPage from "./pages/callback";
+// import CallbackPage from "./pages/callback";
 import HomePage from "./pages/home";
 import CreatePage from "./pages/create";
 import NotificationsPage from "./pages/notifications";
@@ -31,7 +31,7 @@ function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={user ? <Navigate to="/home" /> : <SplashPage />} />
-      <Route path="/callback" element={<CallbackPage />} />
+// <Route path="/callback" element={<CallbackPage />} />
       <Route path="/home" element={<ProtectedRoute><HomePage /></ProtectedRoute>} />
       <Route path="/search" element={<ProtectedRoute><SearchPage /></ProtectedRoute>} />
       <Route path="/create" element={<ProtectedRoute><CreatePage /></ProtectedRoute>} />
