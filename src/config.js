@@ -1,6 +1,6 @@
 export const app_config = {
-  client_id: "1488082616342155404",
-  client_secret: "DSJ7MWGU3zMmifQIyNX1RnNfG-bwZxpQ",
+  client_id: "1488185208493576274",
+  client_secret: "Lv-1OXH9WgaUZB161xJiUcs-uh5Yp--Z",
   supa_url: "https://jkzhzdopyvyhzvdomqzx.supabase.co",
   supa_anon_key: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impremh6ZG9weXZ5aHp2ZG9tcXp4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ4NTgyMzQsImV4cCI6MjA5MDQzNDIzNH0.Z-DZKNanAJ9g_E-8qCfIfa8XanQ1Iam9qJlfrmFnIfY",
   supa_service_role: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impremh6ZG9weXZ5aHp2ZG9tcXp4Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NDg1ODIzNCwiZXhwIjoyMDkwNDM0MjM0fQ.vWcWYoCFdsBOxM4fOWY0eynpUE4qlMaVR5Rr9GMfUyQ",
