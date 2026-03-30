@@ -22,14 +22,14 @@ export function AuthProvider({ children }) {
     set_loading(false);
   }, []);
 
-  const login_with_discord = () => {
-    const params = new URLSearchParams({
-      client_id: app_config.client_id,
-      redirect_uri: app_config.redirect_uri,
-      response_type: "code",
-      scope: "identify"
+  const login_with_discord = async () => {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: 'discord',
+      options: {
+        redirectTo: 'https://expose-center.vercel.app/home'
+      }
     });
-    window.location.href = `https://discord.com/api/oauth2/authorize?${params.toString()}`;
+    if (error) console.error('Login error:', error);
   };
 
   const handle_callback = async (code) => {
