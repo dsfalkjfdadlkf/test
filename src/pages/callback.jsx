@@ -1,29 +1,30 @@
 import { useEffect } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { use_auth } from "../auth";
 
 export default function CallbackPage() {
   const { handle_callback } = use_auth();
   const navigate = useNavigate();
-  const [params] = useSearchParams();
 
   useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
     const code = params.get("code");
+    
     if (code) {
-      handle_callback(code).then((user) => {
-        if (user) navigate("/home");
-        else navigate("/");
+      handle_callback(code).then(() => {
+        navigate("/home");
+      }).catch(() => {
+        navigate("/");
       });
     } else {
       navigate("/");
     }
-  }, []);
+  }, [handle_callback, navigate]);
 
   return (
-    <div className="splash_screen">
-      <div className="loading_spinner">
-        <div className="spinner" />
-      </div>
+    <div className="loading_spinner">
+      <div className="spinner" />
+      <p>Logging you in...</p>
     </div>
   );
 }
